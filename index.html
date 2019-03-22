@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, intial-scale-1.0">
+
+	<title>Connor Herring Designs</title>
+
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="shortcut icon" type="image/png" href="images/portfolioicon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!----main id="app"-->
+<!--Start Top Nav Bar-->
+
+<input id="toggle" type="checkbox"/>
+<label class="hamburger" for="toggle">
+  <div class="top"></div>
+  <div class="meat"></div>
+  <div class="bottom"></div>
+</label>
+
+<div class="nav">
+  <div class="nav-wrapper">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+	  <a href="mywork.html">My Work</a>
+      <a href="contact.html">Contact</a>
+		</nav>
+  </div>
+</div>
+
+<div class="expanded row">
+	<div class="small-12 large-12">
+<a href="index.html"><img class="portfoliologo" src="images/portfoliologo.png" height="60" width="60" alt="portfoliologo"></a>
+	</div>
+</div>
+
+
+
+
+<!--Start Intro Spotlight-->
+
+
+<section id="maincontent">
+		<div class="row">
+			<div class="small-12 medium-12 large-12 columns">
+				<h1 class="main-title">Welcome,</h1>
+				<div id="text"></div>
+				
+				<div id="me">
+					
+						<p id="me1">{{ aboutme[0].Text }}</p>
+					</div>
+				<div class="box"><a href="#worksection">View work</a></div>
+			</div>
+		</div>
+</section>
+
+
+
+<!--Start About Me-->
+
+<section class="aboutme">
+	<div class="expanded row">
+		<div class="small-12 medium-4 large-4 columns">
+        	<div id="circle-img2">
+        	<img class="aboutmepic" src="images/aboutmepic2.png" alt="aboutmepic">
+      		</div>
+    	</div>
+
+	<div class="large-8 medium-8 small-12 columns">
+		<div id="aboutmeintro">
+			<h1 class="aboutmetitle">{{aboutme[1].Text}}</h1>
+				<p class="aboutmeinfo">{{aboutme[2].Text}}</p>
+					<p class="aboutmeinfo2">{{aboutme[3].Text}}</p>
+					<p class="aboutmeinfo3"><a href="https://media.licdn.com/media-proxy/ext?w=800&h=800&f=n&hash=k18sJsbHDQ%2Bb5Hb6IqR6cAFoTfo%3D&ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta5g-0R6jnhodx1Ey9KGTqAGj6E5DQJHUA3L0CHH05IbfPWjrcJLfLePwoEARKXpSjQA7Lbu1EWXgQY64IoK9K9V52MXjLcP5agYUbhl4j3lK6w">Click here to view my resume!</a></p>
+				</div>
+		</div>
+	</div>
+</section>
+
+
+<!--Fav things-->
+
+
+<section class="favorites">
+		<div class="expanded row">
+		<div class="large-12 small-12">
+			<h1 class="hidden">My favorite apps<a class="favoritessection"></a></h1>
+
+		</div>
+		</div>
+			<div class="row" id="favoritepics">
+				<div class="large-4 medium-4 small-12 columns">
+						<h1 class="gallerytitle2">{{aboutme[4].Text}}</h1>
+					<img src="images/moon.png" alt="moon">
+				
+				</div>
+					<div class="large-4 medium-4 small-12 columns">
+							<h1 class="gallerytitle2">{{aboutme[5].Text}}</h1>
+						<img src="images/moon2.png" alt="moon2">
+					</div>
+					<div class="large-4 medium-4 small-12 columns">
+							<h1 class="gallerytitle2">{{aboutme[6].Text}}</h1>
+						<img src="images/moon3.png" alt="moon3" >
+					</div>
+					<div class="large-7 large-centered medium-7 medium-centered small-12">
+							<h1 class="gallerytitle3">{{aboutme[7].Text}}</h1>
+					</div>
+			</div>
+			</section>
+
+
+
+
+ 
+ <!--My Work-->
+
+
+<section class="mywork">
+	<div class="expanded row">
+	<div class="large-12 small-12">
+		<h1 class="gallerytitle"><a class="worksection">{{aboutme[8].Text}}</a></h1>
+		<hr color="whitesmoke">
+	</div>
+	</div>
+		
+	<div class="expanded row">
+			<h2 class="hidden">Work Pics</h2>
+		<div id="workpics">
+
+
+			<div class="large-3 medium-4 small-12 columns">
+				<img src="images/work1.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork1">
+			</div>
+		
+		
+		<!--second pic-->
+			<div class="large-3 medium-4 small-12 columns">
+				<img src="images/portfoliowork2.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork1">
+			</div>
+		
+			<!--third pic-->
+			<div class="large-3 medium-4 small-12 columns">
+				<img src="images/work4.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork1">
+			</div>
+	
+		
+		<!--4th pic-->
+			<div class="large-3 medium-4 small-12 columns">
+				<img src="images/portfoliowork3.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork4">
+			</div>
+	
+			<!--5th pic-->
+			<div class="large-3 medium-4 small-12 columns">
+					<img src="images/portfoliowork4.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork4">
+				</div>
+	
+			<!--Last pic-->
+			<div class="large-3 medium-4 small-12 columns">
+					<img src="images/work2.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork4">
+				</div>
+
+				<div class="large-3 medium-4 small-12 columns">
+					<img src="images/work5.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork4">
+				</div>
+				<div class="large-3 medium-4 small-12 columns">
+					<img src="images/work3.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork4">
+				</div>
+				
+				<div class="large-3 medium-4 small-12 columns">
+					<img src="images/work6.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork4">
+				</div>
+
+				<div class="large-3 medium-4 small-12 columns">
+					<img src="images/portfoliowork5.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork4">
+				</div>
+
+				<div class="large-3 medium-4 small-12 columns">
+					<img src="images/portfoliowork6.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork4">
+				</div>
+
+				<div class="large-3 medium-4 small-12 columns">
+					<img src="images/portfoliowork7.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork4">
+				</div>
+		</div>
+		
+		
+		
+		<div id="myModal" class="modal">
+			<div class="large-6 medium-8 medium-centered small-12 large-centered columns">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content" >
+		
+				<div class="mySlides">
+					<div class="numbertext">1 / 12</div>
+					<img src="images/proj1.png" alt="prevwork5" >
+					<br>
+					<div class="caption-container">
+						<br>
+							<h3>Eon Competitive Website</h3>
+							<h4>This project was made for an Organization I created back in 2013 called "Eon". This site is designed and geared towards the fans/members of Eon so they can easily browse featured content, news, and interact with other members.</h4>
+						<a href="https://github.com/canxck"><img class="github" src="images/github.png"></a>
+						<h3>Click to view the project!</h3>
+						<br>
+					<p id="caption"></p>
+				</div>
+				</div>
+		
+				<div class="mySlides">
+						<div class="numbertext">2 / 12</div>
+						<img src="images/portfolioworklarge4.png" alt="prevwork5" >
+						<br>
+						<div class="caption-container">
+								<br>
+								<h3>Venice Beach Pizza Website</h3>
+								<h4>This is a revamped website design made for Venice Beach Pizza located in Stoney Creek, Ontario. I designed this to be for a potential client as I noticed their website was in need of some updates. So I designed this website and kept in mind the simplicity of their old site with a little more professionalism.</h4>
+							<a href="https://github.com/canxck"><img class="github" src="images/github.png"></a>
+							<h3>Click to view the project!</h3>
+							<br>
+							<h3>The brief</h3>
+								<h4>This is a revamped website design made for Venice Beach Pizza located in Stoney Creek, Ontario. I designed this to be for a potential client as I noticed their website was in need of some updates. So I designed this website and kept in mind the simplicity of their old site with a little more professionalism.</h4>
+							<br>
+							<h3>The deliverable</h3>
+								<h4>This is a revamped website design made for Venice Beach Pizza located in Stoney Creek, Ontario. I designed this to be for a potential client as I noticed their website was in need of some updates. So I designed this website and kept in mind the simplicity of their old site with a little more professionalism.</h4>
+								<br>
+								<p id="caption"></p>
+
+					</div>
+				</div>
+		
+				<div class="mySlides">
+						<div class="numbertext">3 / 12</div>
+						<img src="images/proj4.png" alt="prevwork5" >
+						<br>
+						<div class="caption-container">
+								<br>
+								<h3>Fusion Fitness Website</h3>
+								<h4>This is another simple website I made for a Fusion Fitness which is was a gym company looking to break into the fitness club industry. I designed the website so it was easy for new members or potential members to browse and potentially join the club!</h4>
+							<a href="https://github.com/canxck"><img class="github" src="images/github.png"></a>
+							<h3>Click to view the project!</h3>
+							<br>
+						<p id="caption"></p>
+					</div>
+				</div>
+				
+				<div class="mySlides">
+						<div class="numbertext">4 / 12</div>
+						<img src="images/portfolioworklarge3.png" alt="prevwork5" >
+						<br>
+						<div class="caption-container">
+								<br>
+								<h3>Roku Flashback Website</h3>
+								<h4>This is a streaming website called Roku that we were given in class to design and create for people coming to stream movies, tv, and music. I designed this website so that it was easy for members to browse the material and genres they prefer to that they could start watching/listening ASAP!</h4>
+							<a href="https://github.com/canxck"><img class="github" src="images/github.png"></a>
+							<h3>Click to view the project!</h3>
+							<br>
+						<p id="caption"></p>
+					</div>
+				</div>
+	
+				<div class="mySlides">
+						<div class="numbertext">5 / 12</div>
+						<img src="images/portfolioworklarge5.png" alt="prevwork5" >
+						<br>
+						<div class="caption-container">
+								<br>
+								<h3>Ontario Summer Website</h3>
+								<h4>This was a group website we were given in class to design and promote summer travel in Ontario. We were instructed to create this website, logo, and promotional video from the ground up. So keeping that in mind we wanted to make a simple website showcasing all the amazing things to do in Ontario as well as make it easy and stylish so that viewer would potentially visit!</h4>
+							<a href="https://github.com/canxck"><img class="github" src="images/github.png"></a>
+							<h3>Click to view the project!</h3>
+							<br>
+						<p id="caption"></p>
+					</div>
+					</div>
+
+					<div class="mySlides">
+							<div class="numbertext">6 / 12</div>
+							<img src="images/portfolioworklarge7.png" alt="prevwork5" >
+							<br>
+							<div class="caption-container">
+									<br>
+									<h3>Pure Volume Music/News Website</h3>
+									<h4>This was another group project we were given to create a website promoting the Music industry and the news associated with it. I designed and created the website so that users could come, view the news, and be able to read new articles so that they can stay up to date with all the news in the industry!</h4>
+								<a href="https://github.com/canxck"><img class="github" src="images/github.png"></a>
+								<h3>Click to view the project!</h3>
+								<br>
+							<p id="caption"></p>
+						</div>
+						</div>
+
+						<div class="mySlides">
+								<div class="numbertext">7 / 12</div>
+								<img src="images/portfolioworklarge6.png" alt="prevwork5" >
+								<br>
+								<div class="caption-container">
+										<br>
+										<h3>X-Wave Fruit Infused Water Bottle </h3>
+										<h4>This was a 3D and video project where me and my partner Main Shalabi were tasked to create a 3D water bottle infuser company and its packaging as well as make a promotional video for the company (X-Wave). X-Wave was our brand and the meaning behind the name X-Wave is the combination of two ingredients (fruit/vegetables & water) being hit by the waves of the water in the bottle.</h4>
+									<a href="https://github.com/canxck"><img class="github" src="images/github.png"></a>
+									<h3>Click to view the project!</h3>
+									<br>
+								<p id="caption"></p>
+							</div>
+							</div>
+
+							<div class="mySlides">
+									<div class="numbertext">8 / 12</div>
+									<img src="images/proj3.png" alt="prevwork5" >
+									<br>
+									<div class="caption-container">
+											<br>
+											<h3>Starship Troopers Quiz</h3>
+											<h4>This was a Javascript/HTML/CSS project where I was instructed to create some sort of game promoting the movie Starship Troopers. Me and my partner Liam Keery created this 10 question multiple choice quiz to test your knowledge on the famous 2000's flick Starship Troopers. Download it and try it for yourself!</h4>
+										<a href="https://github.com/canxck"><img class="github" src="images/github.png"></a>
+										<h3>Click to view the project!</h3>
+										<br>
+									<p id="caption"></p>
+								</div>
+								</div>
+
+								<div class="mySlides">
+										<div class="numbertext">9 / 12</div>
+										<video controls loop id="myVideo"> 
+										<source src="images/SoccerScene.mp4" autoplay>
+										</video>
+										<div class="caption-container">
+											<br>
+											<h3>Sports Net 3D Scene</h3>
+												<h4>This was a project where I was instructed to create a 3D landscape and video for Sports Net promoting the soccer sport. The video is something you would see before the sports match begins to showcase the top contenders as well as the soccer cup to the winning team!</h4>
+											<a href="https://github.com/canxck"><img class="github" src="images/github.png"></a>
+											<h3>Click to view the project!</h3>
+											<br>
+										<p id="caption"></p>
+									</div>
+									</div>
+
+									<div class="mySlides">
+											<div class="numbertext">10 / 12</div>
+											<img src="images/portfolioworklarge1.png" alt="prevwork5" >
+											<br>
+											<div class="caption-container">
+													<br>
+													<h3>Adidas Adipure Website Mock</h3>
+													<h4>This was a Adidas concept website I made to showcase their new Adipure shoe line. I also made sure to have a feautured videos and news section so that viewers can see the new shoes as well as read and see more about Adidas with the overall goal of them purchasing the shoes!</h4>
+												<a href="https://github.com/canxck"><img class="github" src="images/github.png"></a>
+												<h3>Click to view the project!</h3>
+												<br>
+											<p id="caption"></p>
+										</div>
+										</div>
+
+										<div class="mySlides">
+												<div class="numbertext">11 / 12</div>
+												<img src="images/portfolioworklarge2.png" alt="prevwork5" >
+												<br>
+												<div class="caption-container">
+														<br>
+														<h3>Pizza Amore mobile app</h3>
+														<h4>This was another website design I made for a Pizza Company of my own called "Pizza Amore" which translates to Pizza Love in english! I designed this website to be simple and straight to the point so any customer could order right off their phone and see the best deals right away to make it easy for them!</h4>
+													<a href="https://github.com/canxck"><img class="github" src="images/github.png"></a>
+													<h3>Click to view the project!</h3>
+													<br>
+												<p id="caption"></p>
+											</div>
+											</div>
+					
+					<div class="mySlides">
+							<div class="numbertext">12 / 12</div>
+							<video controls loop id="myVideo"> 
+							<source src="images/baseball.mp4" autoplay controls>
+							</video>
+							<div class="caption-container">
+									<br>
+									<h3>Sports HUD and Visualization Video</h3>
+									<h4>This was a project where I was instructed to create a 3D landscape and video for Sports Net promoting the soccer sport. The video is something you would see before the sports match begins to showcase the top contenders as well as the soccer cup to the winning team!</h4>
+								<a href="https://github.com/canxck"><img class="github" src="images/github.png"></a>
+								<h3>Click to view the project!</h3>
+								<br>
+							<p id="caption"></p>
+						</div>
+						</div>
+
+						
+				
+		
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		
+			
+		
+				<div class="column">
+						
+					<img class="demo cursor" src="images/work1.png"  onclick="currentSlide(1)" alt="Project 1">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="images/portfoliowork2.png"  onclick="currentSlide(2)" alt="Project 2">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="images/work4.png" onclick="currentSlide(3)" alt="Project 3">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="images/portfoliowork3.png"  onclick="currentSlide(4)" alt="project 4">
+				</div>
+				<div class="column">
+						<img class="demo cursor" src="images/portfoliowork4.png"  onclick="currentSlide(5)" alt="project 5">
+					</div>
+					<div class="column">
+							<img class="demo cursor" src="images/work2.png"  onclick="currentSlide(6)" alt="project 6">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="images/work5.png"  onclick="currentSlide(6)" alt="project 6">
+						</div>
+
+						<div class="column">
+							<img class="demo cursor" src="images/work3.png"  onclick="currentSlide(6)" alt="project 6">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="images/work6.png"  onclick="currentSlide(6)" alt="project 6">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="images/portfoliowork5.png"  onclick="currentSlide(6)" alt="project 6">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="images/portfoliowork6.png"  onclick="currentSlide(6)" alt="project 6">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="images/portfoliowork6.png"  onclick="currentSlide(6)" alt="project 6">
+						</div>
+		
+		</div>
+		</div>
+		</div>
+		</div>
+		
+		
+		
+		
+</section>
+
+<section class="reeltitle">
+		<div class="row">
+			<div class="large-12 small-12">
+				<h1 class="gallerytitle"><a class="reelsection"></a>{{aboutme[9].Text}}</h1>
+				   <hr color="whitesmoke">
+			</div> 
+		</div>
+
+		<div class="large-10 large-offset-1 medium-10 medium-offset-1 small-12">
+			<video src="images/portfoli_reel.mp4" width="100%" controls></video>
+		</div>
+	
+
+
+	
+	
+	</section>
+
+
+
+
+<!--Contact Section-->
+
+<section class="contacttitle">
+	<div class="row">
+		<div class="large-12 small-12">
+			<h1 class="contactmetitle"><a class="contactsection"></a>{{aboutme[10].Text}}</h1>
+   			<hr color="whitesmoke">
+		</div> 
+	</div>
+</section>
+
+
+<section class="contact">
+	<form class="contact-form" action="includes/contact-form-handler.php" method="POST">
+  <div class="row">
+   <div class="large-12 small-12">
+   </div>
+    <div class="large-6 medium-6 small-12 columns">
+      <label><h1>{{aboutme[12].Text}}</h1>
+        <input type="text" name="name" class="form-control" placeholder="Your name" /> 
+      </label> 
+	</div>
+	<div class="large-6 medium-6 small-12 columns">
+		<label><h1>{{aboutme[11].Text}}</h1>
+		  <input type="email" name="email" class="form-control" placeholder="Your email"/>
+		</label>    
+	  </div>
+  </div>
+  <div class="row">
+    <div class="large-12 medium-12 small-12 columns">
+      <label><h1>{{aboutme[13].Text}}</h1>
+        <textarea rows="7" name="message" placeholder="Your message"></textarea>
+      </label>
+    </div>
+  </div>
+  <div class="row submit">
+    <button type="submit" name="submit" form="form" value="Submit">{{aboutme[14].Text}}</button> 
+  </div>
+  </form>
+</section>
+	
+	
+	
+<!--Bottom Icons-->	
+	
+ <section class="bottomicons">
+ 	<div class="row">
+ 	<div class="large-12 small-12 columns">
+ 	<h1 class="iconstext">{{aboutme[15].Text}}</h1>
+		<a href="https://www.facebook.com/ConnorCanucK" class="fa fa-facebook"></a>
+		<a href="https://www.twitter.com/EonCanucK" class="fa fa-twitter"></a>
+		<a href="https://www.instagram.com/Connorherr" class="fa fa-instagram"></a>
+		<a href="https://www.linkedin.com/in/connor-herring-71775717a/" class="fa fa-linkedin"></a>
+	</div>
+	 </div>
+ </section>
+
+ <!--Test Lightbox-->
+
+  
+
+
+
+<!--main-->
+
+	<script src="js/main.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script src="js/texttyping.js"></script>
+	<script src="includes/connect.php"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

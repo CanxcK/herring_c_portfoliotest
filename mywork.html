@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, intial-scale-1.0">
+
+	<title>Connors Portfolio</title>
+
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body>
+
+<main id="app">
+
+        <input id="toggle" type="checkbox"/>
+        <label class="hamburger" for="toggle">
+          <div class="top"></div>
+          <div class="meat"></div>
+          <div class="bottom"></div>
+        </label>
+        
+        <div class="nav">
+          <div class="nav-wrapper">
+            <nav>
+              <a href="index.html">Home</a>
+              <a href="aboutme.html">About Me</a>
+              <a href="mywork.html">My Work</a>
+              <a href="contact.html">Contact</a>
+                </nav>
+          </div>
+        </div>
+        <a href="index.html"><img class="portfoliologo" src="images/portfoliologo.png" height="60px" width="60px"></a>
+
+
+
+
+        <section class="mywork">
+                <div class="expanded row">
+                <div class="large-12 small-12">
+                    <h1 class="gallerytitle"><a name="worksection">My Work!</h1></a>
+                    <hr color="whitesmoke">
+                </div>
+                </div>
+                    
+                <div class="expanded row">
+                        <h2 class="hidden"></h2>
+                    <div id="workpics">
+            
+            
+                        <div class="large-4 medium-4 small-12 columns">
+                            <img src="images/work1.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork1">
+                        </div>
+                    
+                    
+                    <!--second pic-->
+                        <div class="large-4 medium-4 small-12 columns">
+                            <img src="images/work2.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork1">
+                        </div>
+                    
+                        <!--third pic-->
+                        <div class="large-4 medium-4 small-12 columns">
+                            <img src="images/work3.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork1">
+                        </div>
+                    
+                    
+                    <!--4th pic-->
+                        <div class="large-4 medium-4  small-12 columns">
+                            <img src="images/work4.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork4">
+                        </div>
+                
+                        <!--5th pic-->
+                        <div class="large-4 medium-4  small-12 columns">
+                                <img src="images/work5.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork4">
+                            </div>
+                
+                        <!--Last pic-->
+                        <div class="large-4 medium-4  small-12 columns">
+                                <img src="images/work6.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="prevwork4">
+                            </div>
+                    </div>
+                    
+                    
+                    
+                    <div id="myModal" class="modal">
+                        <div class="large-6 medium-8 medium-centered small-12 large-centered columns">
+                        <span class="close cursor" onclick="closeModal()">&times;</span>
+                        <div class="modal-content" >
+                    
+                            <div class="mySlides">
+                                <div class="numbertext">1 / 6</div>
+                                <img src="images/proj1.png" alt="prevwork5" >
+                            </div>
+                    
+                            <div class="mySlides">
+                                <div class="numbertext">2 / 6</div>
+                                <img src="images/proj2.png" alt="prevwork6" >
+                            </div>
+                    
+                            <div class="mySlides">
+                                <div class="numbertext">3 / 6</div>
+                                <img src="images/proj3.png" alt="prevwork7">
+                            </div>
+                            
+                            <div class="mySlides">
+                                <div class="numbertext">4 / 6</div>
+                                <img src="images/proj4.png" alt="prevwork8">
+                            </div>
+                
+                            <div class="mySlides">
+                                    <div class="numbertext">5 / 6</div>
+                                    <img src="images/proj5.png" alt="prevwork8">
+                                </div>
+                                
+                                <div class="mySlides">
+                                        <div class="numbertext">6 / 6</div>
+                                        <video autoplay muted loop id="myVideo"> 
+                                        <source src="images/SoccerScene.mp4" width="600" autoplay alt="prevwork8">
+                                        </video>
+                                    
+                                    
+                                    </div>
+                                    
+                            
+                    
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                            <div class="caption-container">
+                                <p id="caption"></p>
+                            </div>
+                    
+                    
+                            <div class="column">
+                                <img class="demo cursor" src="images/proj1.png"  onclick="currentSlide(1)" alt="Project 1">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/proj2.png"  onclick="currentSlide(6)" alt="Project 2">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/proj3.png" onclick="currentSlide(3)" alt="Project 3">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/proj4.png"  onclick="currentSlide(4)" alt="project 4">
+                            </div>
+                            <div class="column">
+                                    <img class="demo cursor" src="images/proj4.png"  onclick="currentSlide(4)" alt="project 5">
+                                </div>
+                                <div class="column">
+                                        <img class="demo cursor" src="images/proj4.png"  onclick="currentSlide(4)" alt="project 6">
+                                    </div>
+                    
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                </br>
+                    
+                    
+                    
+                    
+            </section>
+
+
+
+        
+            
+            
+
+
+
+
+ 
+
+
+
+</main>
+
+	<script src="js/main.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script src="includes/connect.php"></script>
+</body>
+</html>
